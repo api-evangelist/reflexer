@@ -1,0 +1,26 @@
+generated: '2026-07-21'
+method: searched
+source: https://docs.reflexer.finance/ + npm registry + https://github.com/reflexer-labs
+packages:
+- language: javascript
+  registry: npm
+  name: geb.js
+  url: https://www.npmjs.com/package/geb.js
+  install: npm install geb.js
+  version: 1.1.40
+  license: MIT
+  official: true
+  description: Library to interact with the GEB smart contracts. Manage your safes,
+    mint RAI, inspect the system state, and much more. Published by guillaume@reflexer.finance.
+  repository: https://github.com/reflexer-labs/geb.js
+  docs: https://docs.reflexer.finance/geb-js/getting-started
+- language: python
+  registry: github
+  name: pyflex
+  url: https://github.com/reflexer-labs/pyflex
+  install: git clone https://github.com/reflexer-labs/pyflex
+  official: true
+  description: Python library for querying and interacting with GEB contracts (Reflexer's
+    Python SDK). Distributed via GitHub, not published to PyPI under this name (the
+    PyPI 'pyflex' project is an unrelated seismology tool).
+  docs: https://docs.reflexer.finance/pyflex/getting-started

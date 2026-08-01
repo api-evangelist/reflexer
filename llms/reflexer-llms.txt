@@ -1,0 +1,104 @@
+# GEB Docs
+
+## GEB Docs
+
+- [Introduction to GEB](https://docs.reflexer.finance/readme.md): The what and how of the GEB framework
+- [Community Resources](https://docs.reflexer.finance/community-resources.md): List of talks and articles about RAI and Reflexer
+- [FLX Mechanics](https://docs.reflexer.finance/flx-mechanics.md)
+- [FAQ](https://docs.reflexer.finance/faq.md): Frequently asked questions about RAI and GEB
+- [RAI Use-Cases](https://docs.reflexer.finance/rai/rai-use-cases.md): An incomplete list of things you can build with or on top of RAI
+- [Multi-chain RAI](https://docs.reflexer.finance/rai/multi-chain-rai.md)
+- [RAI Integrations](https://docs.reflexer.finance/rai/rai-integrations-and-partners.md)
+- [Intro to The League](https://docs.reflexer.finance/the-money-god-league/intro-to-the-league.md)
+- [Governance Minimization Guide](https://docs.reflexer.finance/ungovernance/governance-minimization-guide.md): Steps and details for minimizing governance over a GEB deployment
+- [GEB Risks](https://docs.reflexer.finance/risk/geb-risks.md)
+- [PID Failure Modes & Responses](https://docs.reflexer.finance/risk/pid-failure-modes-and-responses.md): How to react in different scenarios where the redemption rate is ineffective
+- [RAI Uniswap V2 Mint + LP Incentives Program](https://docs.reflexer.finance/incentives/rai-mint-+-lp-incentives-program.md)
+- [RAI Uniswap V3 Mint + LP Incentives Program (Inactive)](https://docs.reflexer.finance/incentives/rai-uniswap-v3-mint-+-lp-incentives-program.md): Inactive
+- [FLX Staking](https://docs.reflexer.finance/incentives/flx-staking.md)
+- [RAI / ETH Uniswap V3 Oracle LP Incentives Program](https://docs.reflexer.finance/incentives/rai-eth-uniswap-v3-oracle-lp-incentives-program.md): Description coming soon
+- [Core Contracts Naming Transition](https://docs.reflexer.finance/contract-translation/naming-transition.md): Going from cute to actual English words
+- [Governance Contracts Naming Transition](https://docs.reflexer.finance/contract-translation/governance-contracts-naming-transition.md)
+- [SAFE Management Contract Naming Transition](https://docs.reflexer.finance/contract-translation/safe-management-contract-naming-transition.md)
+- [Core Module](https://docs.reflexer.finance/system-contracts/core.md): Handling SAFE state, liquidations and accounting (surplus & bad debt)
+- [SAFE Engine](https://docs.reflexer.finance/system-contracts/core/safe-engine.md): The SAFE, system coin and collateral database
+- [Liquidation Engine](https://docs.reflexer.finance/system-contracts/core/liquidation-engine.md): The protocol's liquidation mechanism
+- [Accounting Engine](https://docs.reflexer.finance/system-contracts/core/accounting-engine.md): The protocol's accountant, keeping track of surplus and deficit
+- [Auction Module](https://docs.reflexer.finance/system-contracts/auction-module.md): Maintaining system balance by covering shortfall and disbursing surplus
+- [English Collateral Auction House](https://docs.reflexer.finance/system-contracts/auction-module/english-collateral-auction-house.md): English collateral auctioneer that tries to recapitalize the system
+- [Fixed Discount Collateral Auction House](https://docs.reflexer.finance/system-contracts/auction-module/fixed-discount-collateral-auction-house.md): Auctioneer that tries to recapitalize the system by selling collateral at a discounted price
+- [Increasing Discount Collateral Auction House](https://docs.reflexer.finance/system-contracts/auction-module/increasing-discount-collateral-auction-house.md): Auctioneer that tries to recapitalize the system by selling collateral at an increasing discount
+- [Debt Auction House](https://docs.reflexer.finance/system-contracts/auction-module/debt-auction-house.md): Debt auctioneer that covers deficit by minting protocol tokens in exchange for system coins
+- [Surplus Auction House](https://docs.reflexer.finance/system-contracts/auction-module/surplus-auction-house.md): Surplus auctioneer that sells extra stability fees in exchange for protocol tokens
+- [Oracle Module](https://docs.reflexer.finance/system-contracts/oracle-module.md): The "source of truth" for collateral and system coin prices
+- [Oracle Relayer](https://docs.reflexer.finance/system-contracts/oracle-module/oracle-relayer.md): The glue between price feeds and the SAFE Engine
+- [Medianizer](https://docs.reflexer.finance/system-contracts/oracle-module/medianizer.md): Oracle component that fetches the price of an asset
+- [DSValue](https://docs.reflexer.finance/system-contracts/oracle-module/medianizer/ds-value.md): Simple price feed setter and getter
+- [Governance Led Median](https://docs.reflexer.finance/system-contracts/oracle-module/medianizer/governance-led-median.md): Medianizer that depends on governance token holders to whitelist off-chain oracles
+- [Chainlink Median](https://docs.reflexer.finance/system-contracts/oracle-module/medianizer/chainlink-median.md): Chainlink integrated medianizer
+- [Uniswap V2 Median](https://docs.reflexer.finance/system-contracts/oracle-module/medianizer/uniswap-v2-median.md): A medianizer using the Uniswap V2 TWAP oracle implementation
+- [FSM](https://docs.reflexer.finance/system-contracts/oracle-module/fsm.md): Feed security module that delays upcoming price data from being pushed in the core system
+- [Oracle Security Module](https://docs.reflexer.finance/system-contracts/oracle-module/fsm/oracle-security-module.md): Basic price feed delay mechanism
+- [Dampened Security Module](https://docs.reflexer.finance/system-contracts/oracle-module/fsm/dampened-security-module.md): An OSM-like contract that bounds price feed changes between consecutive updates
+- [FSM Governance Interface](https://docs.reflexer.finance/system-contracts/oracle-module/fsm/fsm-governance-interface.md): Governance contract for stopping FSM-like contracts
+- [Token Module](https://docs.reflexer.finance/system-contracts/token-module.md): ERC20 tokens, authority contracts and adapters for exiting and joining collateral in an out of the system
+- [Token Adapters](https://docs.reflexer.finance/system-contracts/token-module/token-adapters.md): The gateways for collateral and system coins to join or exit the system
+- [System Coin](https://docs.reflexer.finance/system-contracts/token-module/system-coin.md): ERC20 representation of the coins backed by system collateral
+- [Protocol Token](https://docs.reflexer.finance/system-contracts/token-module/protocol-token.md): The protocol's recapitalization source
+- [Protocol Token Authority](https://docs.reflexer.finance/system-contracts/token-module/protocol-token-authority.md): The guardian that decides who can mint or burn protocol tokens
+- [Protocol Token Printing Permissions](https://docs.reflexer.finance/system-contracts/token-module/protocol-token-printing-permissions.md): Contract allowing multiple independent debt auction houses to print protocol tokens
+- [Money Market Module](https://docs.reflexer.finance/system-contracts/money-market-module.md): Interest rate setters and collectors
+- [Tax Collector](https://docs.reflexer.finance/system-contracts/money-market-module/tax-collector.md): The protocol's taxman
+- [Sustainability Module](https://docs.reflexer.finance/system-contracts/sustainability-module.md): The protocol's resource management engine
+- [Stability Fee Treasury](https://docs.reflexer.finance/system-contracts/sustainability-module/stability-fee-treasury.md): The protocol's invoice processor
+- [FSM Wrapper](https://docs.reflexer.finance/system-contracts/sustainability-module/fsm-wrapper.md): Wrapper for FSM-like contracts
+- [Increasing Treasury Reimbursement](https://docs.reflexer.finance/system-contracts/sustainability-module/increasing-treasury-reimbursement.md): Integration contract meant to offer an increasing reward pulled from the SF treasury
+- [Mandatory Fixed Treasury Reimbursement](https://docs.reflexer.finance/system-contracts/sustainability-module/mandatory-fixed-treasury-reimbursement.md): Integration contract meant to offer a fixed reward pulled from the SF treasury
+- [Increasing Reward Relayer](https://docs.reflexer.finance/system-contracts/sustainability-module/increasing-reward-relayer.md): Contract that relays SF rewards from the treasury to any other address
+- [Automation Module](https://docs.reflexer.finance/system-contracts/automation-module.md): A set of contracts in charge with automating a GEB
+- [Collateral Auction Throttler](https://docs.reflexer.finance/system-contracts/automation-module/collateral-auction-throttler.md)
+- [Single Spot Debt Ceiling Setter](https://docs.reflexer.finance/system-contracts/automation-module/single-spot-debt-ceiling-setter.md): Setter for a single collateral's debt ceiling
+- [ESM Threshold Setter](https://docs.reflexer.finance/system-contracts/automation-module/esm-threshold-setter.md): Setter that periodically recomputes the threshold in the ESM
+- [Governance Module](https://docs.reflexer.finance/system-contracts/governance-module.md): Tools for achieving consensus
+- [DSPause](https://docs.reflexer.finance/system-contracts/governance-module/ds-pause.md): Delegatecall based proxy with an enforced delay
+- [Shutdown Module](https://docs.reflexer.finance/system-contracts/shutdown-module.md): Winding down system operations
+- [Global Settlement](https://docs.reflexer.finance/system-contracts/shutdown-module/global-settlement.md): Shutting down GEB and returning collateral back to users
+- [ESM](https://docs.reflexer.finance/system-contracts/shutdown-module/esm.md): Trigger global settlement by burning protocol tokens
+- [DSProxy](https://docs.reflexer.finance/proxy-infrastructure/ds-proxy.md): Execute transactions with the use of a proxy
+- [Proxy Registry](https://docs.reflexer.finance/proxy-infrastructure/proxy-registry.md): Tracker and builder of DSProxy contracts
+- [SAFE Manager](https://docs.reflexer.finance/helper-contracts/safe-manager.md): A central hub for all SAFEs
+- [Getting Started](https://docs.reflexer.finance/geb-js/getting-started.md)
+- [Global Settlement Guide](https://docs.reflexer.finance/geb-js/geb-js-global-settlement-guide.md)
+- [API Reference](https://docs.reflexer.finance/geb-js/api-reference.md)
+- [Geb](https://docs.reflexer.finance/geb-js/api-reference/geb.md)
+- [Safe](https://docs.reflexer.finance/geb-js/api-reference/safe.md)
+- [Proxy Actions](https://docs.reflexer.finance/geb-js/api-reference/gebproxyactions.md)
+- [Geb Admin](https://docs.reflexer.finance/geb-js/api-reference/gebadmin.md)
+- [API Endpoints](https://docs.reflexer.finance/api/api-endpoints.md)
+- [Getting Started](https://docs.reflexer.finance/pyflex/getting-started.md)
+- [Configuration](https://docs.reflexer.finance/pyflex/getting-started/configuration.md)
+- [GEB Basics](https://docs.reflexer.finance/pyflex/getting-started/basics.md): Examples of querying the GEB contracts
+- [SAFE Management](https://docs.reflexer.finance/pyflex/safe-management.md)
+- [Opening a SAFE](https://docs.reflexer.finance/pyflex/safe-management/opening-a-safe.md): Steps to open a SAFE and withdraw system coins
+- [Closing a SAFE](https://docs.reflexer.finance/pyflex/safe-management/closing-a-safe.md): Steps to close a SAFE and withdraw collateral.
+- [Numerics](https://docs.reflexer.finance/pyflex/numerics.md)
+- [Keeper Overview](https://docs.reflexer.finance/keepers/overview.md)
+- [Collateral Auction Keeper](https://docs.reflexer.finance/keepers/collateral-auction-keeper.md): How to run a collateral auction keeper
+- [Running in Docker](https://docs.reflexer.finance/keepers/collateral-auction-keeper/running-in-docker.md): Running a collateral auction-keeper in a docker container.
+- [Running on a Host](https://docs.reflexer.finance/keepers/collateral-auction-keeper/running-on-a-host.md): Running a collateral auction keeper directly on a host
+- [Liquidations & Collateral Auctions](https://docs.reflexer.finance/keepers/collateral-auction-keeper/liquidations.md): Overview of the collateral liquidation and auctioning process
+- [Collateral Auction Flash Swaps](https://docs.reflexer.finance/keepers/collateral-auction-keeper/flash-swaps.md): Lightning fast bidding in collateral auctions
+- [Debt Auction Keeper](https://docs.reflexer.finance/keepers/debt-auction-keeper.md): How to run a debt auction keeper
+- [Running in Docker](https://docs.reflexer.finance/keepers/debt-auction-keeper/running-in-docker.md): Running a debt auction keeper in a Docker container
+- [Running on a Host](https://docs.reflexer.finance/keepers/debt-auction-keeper/running-on-a-host.md): Running a debt auction keeper directly on a host
+- [Staked Token Auction Keeper](https://docs.reflexer.finance/keepers/staked-token-auction-keeper.md): How to run a staked token auction keeper
+- [Running in Docker](https://docs.reflexer.finance/keepers/staked-token-auction-keeper/running-in-docker.md): Running a staked token auction keeper in a Docker container
+- [Running on a Host](https://docs.reflexer.finance/keepers/staked-token-auction-keeper/running-on-a-host.md): Running a staked token auction keeper directly on a host
+- [Surplus Auction Keeper](https://docs.reflexer.finance/keepers/surplus-auction-keeper.md): How to run a surplus auction keeper
+- [Running in Docker](https://docs.reflexer.finance/keepers/surplus-auction-keeper/running-in-docker.md): Running a surplus auction keeper in a Docker container
+- [Running on a Host](https://docs.reflexer.finance/keepers/surplus-auction-keeper/running-on-a-host.md): Running a surplus auction-keeper on a host
+- [Bidding Models](https://docs.reflexer.finance/keepers/bidding-models.md): Information about bidding models for debt and surplus auction keepers
+- [SAFE Protection](https://docs.reflexer.finance/liquidation-protection/safe-protection.md): Building and integrating saviour contracts for SAFEs
+- [Liquidation Protection Guide](https://docs.reflexer.finance/liquidation-protection/liquidation-protection-guide.md): A guide to help you protect your SAFEs from liquidation
+- [Uni-V2 RAI/ETH Savior Details](https://docs.reflexer.finance/liquidation-protection/uni-v2-rai-eth-savior-details.md)
+- [Curve V1 Savior Details](https://docs.reflexer.finance/liquidation-protection/curve-v1-savior-details.md)

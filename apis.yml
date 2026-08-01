@@ -1,8 +1,13 @@
 aid: reflexer
 name: Reflexer
-description: 'Reflexer is a company surfaced as a portfolio company of pantera-capital, paradigm and added
-  to the API Evangelist network as a stub for enrichment. Sector: crypto. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Reflexer Labs builds RAI, a decentralized, non-pegged stable asset backed
+  by ETH on Ethereum. Rather than tracking the US dollar, RAI uses an on-chain PID
+  controller and algorithmic redemption rate to achieve relative price stability. The
+  protocol is built on GEB, Reflexer''s open-source framework of smart contracts for
+  SAFEs (collateralized debt positions), liquidations, auctions, oracles, and governance
+  minimization. Developers integrate via the geb.js (JavaScript/TypeScript) and pyflex
+  (Python) SDKs and query protocol state through a hosted GraphQL subgraph (The Graph
+  Protocol). Sector: crypto / DeFi stablecoins.'
 url: https://raw.githubusercontent.com/api-evangelist/reflexer/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -11,13 +16,42 @@ x-backed-by:
 - paradigm
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
+image: https://reflexer.finance/
 tags:
 - Company
 - Crypto
-apis: []
+- DeFi
+- Stablecoin
+- Ethereum
+- GraphQL
+- Smart Contracts
+apis:
+- name: Reflexer RAI Subgraph (GraphQL)
+  description: Hosted GraphQL subgraph (The Graph Protocol) indexing the RAI/GEB on-chain
+    contracts on Ethereum mainnet. Query SAFEs, collateral, system state, redemption
+    rate, and historical data by block. Read-only; no API key required on the hosted
+    endpoint.
+  humanURL: https://docs.reflexer.finance/api/api-endpoints
+  baseURL: https://subgraph.reflexer.finance/subgraphs/name/reflexer-labs/rai/graphql
+  properties:
+  - type: GraphQL
+    url: https://subgraph.reflexer.finance/subgraphs/name/reflexer-labs/rai/graphql
+  - type: Documentation
+    url: https://docs.reflexer.finance/api/api-endpoints
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -26,3 +60,40 @@ maintainers:
 common:
 - type: Website
   url: https://reflexer.finance/
+- type: DeveloperPortal
+  url: https://docs.reflexer.finance/
+- type: Documentation
+  url: https://docs.reflexer.finance/
+- type: APIReference
+  url: https://docs.reflexer.finance/geb-js/api-reference
+- type: GettingStarted
+  url: https://docs.reflexer.finance/geb-js/getting-started
+- type: GitHubOrganization
+  url: https://github.com/reflexer-labs
+- type: Blog
+  url: https://medium.com/reflexer-labs
+- type: Support
+  url: https://discord.gg/AXwXHGsTaJ
+- type: PrivacyPolicy
+  url: https://reflexer.finance/privacy
+- type: SignUp
+  url: https://app.reflexer.finance
+- type: Whitepaper
+  url: https://github.com/reflexer-labs/whitepapers/blob/master/English/rai-english.pdf
+- type: Packages
+  url: packages/reflexer-packages.yml
+- type: SDKs
+  url: packages/reflexer-packages.yml
+- type: LLMsTxt
+  url: llms/reflexer-llms.txt
+- type: Conventions
+  url: conventions/reflexer-conventions.yml
+- type: WellKnown
+  url: well-known/reflexer-well-known.yml
+- type: DomainSecurity
+  url: security/reflexer-domain-security.yml
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

@@ -1,0 +1,27 @@
+generated: '2026-07-21'
+method: probed
+source: live probes of /.well-known/ on Reflexer hosts
+hosts:
+- host: https://reflexer.finance
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+- host: https://docs.reflexer.finance
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+note: No /.well-known/ discovery documents are published. Reflexer is a decentralized
+  (DeFi) protocol; its API surface is on-chain smart contracts plus a hosted GraphQL
+  subgraph, neither of which exposes OAuth/OIDC discovery.

@@ -1,0 +1,43 @@
+generated: '2026-07-21'
+method: derived
+source: https://docs.reflexer.finance/api/api-endpoints + The Graph subgraph query model
+api_style: graphql
+summary: Reflexer's public data API is a GraphQL subgraph (The Graph Protocol) indexing
+  the RAI/GEB on-chain contracts. There is no first-party REST API; reads are GraphQL
+  queries and all state changes happen on-chain via smart contracts (or the geb.js /
+  pyflex SDKs). The conventions below describe the GraphQL query surface.
+authentication:
+  style: none
+  detail: The hosted subgraph GraphQL endpoint requires no API key or token. The Graph
+    decentralized network gateway requires an API key when querying via a gateway.
+  cross_link: null
+idempotency:
+  supported: false
+  detail: The API is read-only GraphQL over indexed chain data; there is no idempotency-key
+    contract. On-chain writes are handled by Ethereum transactions (nonce-based), not
+    this API.
+pagination:
+  style: offset-and-cursor (The Graph)
+  params: [first, skip]
+  ordering: [orderBy, orderDirection]
+  filtering: where
+  max_first: 1000
+  detail: Standard The Graph subgraph pagination; `first` caps at 1000 per query, `skip`
+    offsets, `where` applies field filters, `orderBy`/`orderDirection` sort.
+time_travel:
+  supported: true
+  detail: 'Queries accept a `block: { number: N }` argument to query historical state
+    at a specific Ethereum block.'
+error_envelope:
+  shape: GraphQL `errors[]` array
+  detail: GraphQL-standard response with `data` and `errors[]` (message-bearing) objects.
+  cross_link: null
+versioning:
+  scheme: subgraph deployment
+  detail: Versioning is by subgraph deployment ID / named subgraph; no header-based
+    API version.
+rate_limits:
+  documented: false
+  detail: No rate-limit signaling documented for the hosted endpoint.
+transports:
+  - GraphQL over HTTPS POST
