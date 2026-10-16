@@ -2,6 +2,10 @@
   "repo": "reflexer",
   "feeds": [
     {
+      "source": "https://medium.com/reflexer-labs",
+      "error": "HTTPError"
+    },
+    {
       "source": "https://github.com/reflexer-labs",
       "feed_url": "https://github.com/reflexer-labs",
       "title": "",
@@ -10,5 +14,5 @@
     }
   ],
   "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
